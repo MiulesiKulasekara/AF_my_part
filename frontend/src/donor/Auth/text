@@ -1,0 +1,79 @@
+<Form className="signup-frm">
+
+    <h2>Sign up</h2>
+
+          {/* form lables */}
+
+          {/* name */}
+          <Form.Group className="mb-3" controlId="formBasicName">
+            <Form.Label>Name</Form.Label>
+            <Form.Control type="text" placeholder="Enter name" />
+          </Form.Group>
+
+          {/* email */}
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" />
+          </Form.Group>
+
+          {/* password */}
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" placeholder="Password" />
+          </Form.Group>
+
+          {/* address */}
+          <Form.Group className="mb-3" controlId="formBasicAddress">
+            <Form.Label>Address</Form.Label>
+            <Form.Control type="text" placeholder="Enter address" />
+          </Form.Group>
+
+          {/* Location */}
+          <Form.Group className="mb-3" controlId="formBasicCity">
+            <Form.Label>Location</Form.Label>
+            <Form.Control type="text" placeholder="Location" />
+          </Form.Group>
+
+          {/* phone 1 */}
+          <Row>
+            <Form.Group
+              className="mb-3"
+              as={Col}
+              md="6"
+              controlId="formBasicphoneA"
+            >
+              <Form.Label>Phone number 1</Form.Label>
+              <Form.Control
+                type="tel"
+                placeholder="94 77 111 2223"
+                pattern="94 [0-9]{2} [0-9]{3} [0-9]{4}"
+              />
+            </Form.Group>
+
+            {/* phone 2 */}
+            <Form.Group
+              className="mb-3"
+              as={Col}
+              md="6"
+              controlId="formBasicphoneB"
+            >
+              <Form.Label>Phone number 2</Form.Label>
+              <Form.Control
+                type="tel"
+                placeholder="94 77 111 2223"
+                pattern="94 [0-9]{2} [0-9]{3} [0-9]{4}"
+              />
+            </Form.Group>
+          </Row>
+
+          {/* button */}
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+
+          <div className="signup-text">
+            <small>
+              Already have an account? <a href="/login">Login</a>
+            </small>
+          </div>
+        </Form>
