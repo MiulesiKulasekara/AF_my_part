@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-const Signup = () => {
+const Donorsignup = () => {
   return (
     <div className="main-container-signup">
       <div className="signup-div">
@@ -122,4 +122,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Donorsignup;
