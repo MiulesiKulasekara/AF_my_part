@@ -9,9 +9,7 @@ const Login = () => {
     <div className="main-container-login">
       <div className="login-div">
         <Row>
-          <Col className="login-colA" md="6">
-            hi
-          </Col>
+          <Col className="login-colA" md="6"></Col>
 
           <Col className="login-colB" md="6">
             <Form className="login-frm">
@@ -38,7 +36,11 @@ const Login = () => {
                 controlId="formBasicPassword"
               >
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Enter password" required />
+                <Form.Control
+                  type="password"
+                  placeholder="Enter password"
+                  required
+                />
               </Form.Group>
 
               {/* button */}

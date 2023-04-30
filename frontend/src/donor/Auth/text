@@ -113,4 +113,44 @@
             justify-content: center;
             padding: 10px; comment this line
           } */
+
+
+
+          useEffect(() => {
+            axios
+              .get("https://jsonplaceholder.typicode.com/users")
+              .then((res) => setData(res.data))
+              .catch((err) => console.log(err));
+          }, []);
+        
+          return (
+            <div className="main-container-allusers">
+              <Table responsive="md" className="tbl">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>City</th>
+                    <th>Phone</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data.map((user, index) => {
+                    return (
+                      <tr key={index}>
+                        <td>1</td>
+                        <td>{user.id}</td>
+                        <td>{user.name}</td>
+                        <td>{user.email}</td>
+                        <td>{user.address.city}</td>
+                        <td>{user.phone}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </Table>
+            </div>
+          );
           
