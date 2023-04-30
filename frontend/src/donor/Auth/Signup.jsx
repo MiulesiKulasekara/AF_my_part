@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 
 const Signup = () => {
   return (
-    <div className="main-container">
+    <div className="main-container-signup">
       <div className="signup-div">
         <Row>
           <Col className="signup-colA" md="6"></Col>
@@ -49,7 +49,7 @@ const Signup = () => {
                   <Form.Label>Password</Form.Label>
                   <Form.Control
                     type="password"
-                    placeholder="Password"
+                    placeholder="Enter password"
                     required
                   />
                 </Form.Group>
@@ -111,7 +111,7 @@ const Signup = () => {
 
               <div className="signup-text">
                 <small>
-                  Already have an account? <a href="/login">Login</a>
+                  Already have an account? <a href="/login">Sing in</a>
                 </small>
               </div>
             </Form>

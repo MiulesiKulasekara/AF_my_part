@@ -1,13 +1,24 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Signup from "./donor/Auth/Signup";;
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+//routes
+import Signup from "./donor/Auth/Signup";
+import Login from "./donor/Auth/Login";
+
+
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-      <Signup />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/signup/donor" element={<Signup />} />
+          <Route path="/Login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

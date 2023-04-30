@@ -77,3 +77,40 @@
             </small>
           </div>
         </Form>
+
+
+
+        .main-container-signup {
+            /* background-color: rgb(13, 211, 13); */
+            padding: 50px;
+          }
+          .signup-div {
+            /* background-color: blue; */
+            padding: 30px;
+          }
+          .signup-frm {
+            /* background-color: yellow; */
+            margin: auto;
+            width: 100%;
+            padding: 20px;
+          }
+          .signup-colA {
+            /* padding: 10px;
+              background-color: orange; */
+            background-image: url("../assets/1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+          /* .signup-btn {
+            display: flex;
+            justify-content: center;
+          }
+          #formSignupBtn {
+            width: 100px;
+          }
+          .signup-text {
+            display: flex;
+            justify-content: center;
+            padding: 10px; comment this line
+          } */
+          

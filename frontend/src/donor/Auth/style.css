@@ -1,33 +1,37 @@
-.main-container {
-  /* background-color: rgb(13, 211, 13); */
+/* Donor - singup form */
+.main-container-signup {
   padding: 50px;
 }
 .signup-div {
-  /* background-color: blue; */
-  padding: 30px;
+  margin: auto;
+  width: 80%;
 }
 .signup-frm {
-  /* background-color: yellow; */
   margin: auto;
   width: 100%;
   padding: 20px;
 }
 .signup-colA {
-  /* padding: 10px;
-    background-color: orange; */
   background-image: url("../assets/1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.signup-btn {
-  display: flex;
-  justify-content: center;
+/* ---------------------------------------------- */
+
+.main-container-login {
+  padding: 150px;
 }
-#formSignupBtn {
-  width: 100px;
+.login-div {
+  margin: auto;
+  width: 80%;
 }
-.signup-text {
-  display: flex;
-  justify-content: center;
-  /* padding: 10px;*/
+.login-frm {
+  margin: auto;
+  width: 100%;
+  padding: 20px;
+}
+.login-colA {
+  background-image: url("../assets/5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
