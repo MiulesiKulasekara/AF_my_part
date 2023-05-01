@@ -1,3 +1,4 @@
+import "./style.css"; 
 import Table from "react-bootstrap/Table";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -7,18 +8,17 @@ const Alldonors = () => {
 
   useEffect(() => {
     axios
-      .get("")
+      .get("http://localhost:8000/api/donors")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   return (
-    <div className="main-container-allusers">
-      <Table responsive="md" className="tbl">
+    <div className="main-container-alldonors">
+      <Table responsive="md" className="tbl-alldonors">
         <thead>
           <tr>
             <th>#</th>
-            <th>ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Address</th>
@@ -31,7 +31,7 @@ const Alldonors = () => {
           {data.map((donor, index) => {
             return (
               <tr key={index}>
-                <td>1</td>
+                <td>{donor._id}</td>
                 <td>{donor.name}</td>
                 <td>{donor.email}</td>
                 <td>{donor.address}</td>

@@ -2,6 +2,12 @@ const Donors = require("../models/donorModel");
 const User = require("../models/userModel");
 const mongoose = require("mongoose");
 
+//get all donors
+const getAllDonors = async (req, res) => {
+  const donors = await Donors.find({}).sort({ createAt: -1 });
+  res.status(200).json(donors);
+};
+
 //create a donor
 const createDonor = async (req, res) => {
   //add data to the db
@@ -42,4 +48,4 @@ const createDonor = async (req, res) => {
   }
 };
 
-module.exports = createDonor;
+module.exports = {createDonor,getAllDonors};
