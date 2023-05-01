@@ -2,10 +2,12 @@ import Table from "react-bootstrap/Table";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const Allusers = () => {
+const Alldonors = () => {
+  const [data, setData] = useState([]);
+
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/users")
+      .get("")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -19,7 +21,6 @@ const Allusers = () => {
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
-            <th>Password</th>
             <th>Address</th>
             <th>Location</th>
             <th>Phone 1</th>
@@ -27,21 +28,22 @@ const Allusers = () => {
           </tr>
         </thead>
         <tbody>
-          {/* {data.map((user, index) => {
+          {data.map((donor, index) => {
             return (
               <tr key={index}>
                 <td>1</td>
-                <td>{user.id}</td>
-                <td>{user.name}</td>
-                <td>{user.email}</td>
-                <td>{user.address.city}</td>
-                <td>{user.phone}</td>
+                <td>{donor.name}</td>
+                <td>{donor.email}</td>
+                <td>{donor.address}</td>
+                <td>{donor.location}</td>
+                <td>{donor.tele.phonea}</td>
+                <td>{donor.tele.phoneb}</td>
               </tr>
             );
-          })} */}
+          })}
         </tbody>
       </Table>
     </div>
   );
 };
-export default Allusers;
+export default Alldonors;

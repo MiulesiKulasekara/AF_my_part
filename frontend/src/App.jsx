@@ -5,9 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 //routes
 import Donorsignup from "./donor/Auth/Donorsignup";
 import Login from "./donor/Auth/Login";
-import Allusers from "./donor/Admin/allUsers";
-
-
+import Alldonors from "./donor/Admin/Alldonors";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -18,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/signup/donor" element={<Donorsignup />} />
           <Route path="/Login" element={<Login />} />
-          <Route path="/allusers" element={<Allusers />} />
+          <Route path="/alldonors" element={<Alldonors />} />
         </Routes>
       </BrowserRouter>
     </>
