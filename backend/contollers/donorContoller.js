@@ -1,13 +1,15 @@
 const Donors = require("../models/donorModel");
+const User = require("../models/userModel");
 const mongoose = require("mongoose");
 
 //create a donor
 const createDonor = async (req, res) => {
   //add data to the db
   const { name, email, password, address, location, tele } = req.body;
+  const success = Array();
 
   try {
-    const donor = await Donors.create({
+    const donor = await Donors.create({//donor
       name,
       email,
       password,
@@ -15,12 +17,21 @@ const createDonor = async (req, res) => {
       location,
       tele,
     });
-    // res.status(200).json(donor);
-    res.status(200).json({
-      donor,
-      success: "Donor is created successfully",
-    });
-  } catch (error) {
+      try {//user
+        const user = await User.create({
+          email,
+          password,
+        });
+        success[0] = "User is created successfully";
+      } catch (error) {//user
+        console.log(error);
+        res.status(400).json({ error: error });
+      }
+      success[1] = "Donor is created successfully";
+      res.status(200).json({//user
+        success: success,
+      });
+  } catch (error) {//donor
     console.log(error);
     res.status(400).json({ error: error });
   }
