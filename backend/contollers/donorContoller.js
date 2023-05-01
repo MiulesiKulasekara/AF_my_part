@@ -8,6 +8,22 @@ const getAllDonors = async (req, res) => {
   res.status(200).json(donors);
 };
 
+//geta single Donors
+const getOneDonor = async (req, res) => {
+  const { id } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(404).json({ error: "No such a Donor" });
+  }
+
+  const oneDonor = await Donors.findById(id);
+
+  if (!oneDonor) {
+    return res.status(400).json({ error: "No such a Donor" });
+  }
+  res.status(200).json(oneDonor);
+};
+
 //create a donor
 const createDonor = async (req, res) => {
   //add data to the db
@@ -48,4 +64,7 @@ const createDonor = async (req, res) => {
   }
 };
 
-module.exports = {createDonor,getAllDonors};
+//delete a donor
+// router.delete('/:id',deleteDonor)
+
+module.exports = { createDonor, getAllDonors, getOneDonor };
