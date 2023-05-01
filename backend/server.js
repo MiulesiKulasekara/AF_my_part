@@ -7,6 +7,7 @@ require("dotenv").config();
 const connection = require("./bdconnection/dbconn");
 
 const donorRotes = require("./routes/donorRouter");
+const donationRoute = require("./routes/donationsRouter")
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use((req, res, next) => {
 
 //routes
 app.use("/api/donors", donorRotes);
+app.use("/api/donations", donationRoute);
 
 //db connection
 connection.once("open", () => {

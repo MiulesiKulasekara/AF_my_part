@@ -73,7 +73,7 @@ const Createdonations = () => {
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
-              <Form.Control as="textarea" rows={5} placeholder="Description" />
+              <Form.Control as="textarea" rows={5} placeholder="Description" required/>
             </Form.Group>
 
             {/* button */}
