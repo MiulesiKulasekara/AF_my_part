@@ -9,7 +9,8 @@ const createDonor = async (req, res) => {
   const success = Array();
 
   try {
-    const donor = await Donors.create({//donor
+    const donor = await Donors.create({
+      //donor
       name,
       email,
       password,
@@ -17,21 +18,25 @@ const createDonor = async (req, res) => {
       location,
       tele,
     });
-      try {//user
-        const user = await User.create({
-          email,
-          password,
-        });
-        success[0] = "User is created successfully";
-      } catch (error) {//user
-        console.log(error);
-        res.status(400).json({ error: error });
-      }
-      success[1] = "Donor is created successfully";
-      res.status(200).json({//user
-        success: success,
+    try {
+      //user
+      const user = await User.create({
+        email,
+        password,
       });
-  } catch (error) {//donor
+      success[0] = "User is created successfully";
+    } catch (error) {
+      //user
+      console.log(error);
+      res.status(400).json({ error: error });
+    }
+    success[1] = "Donor is created successfully";
+    res.status(200).json({
+      //user
+      success: success,
+    });
+  } catch (error) {
+    //donor
     console.log(error);
     res.status(400).json({ error: error });
   }
