@@ -5,43 +5,23 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-const Donorsignup = () => {
+const DonorProfileEditForm = () => {
   return (
-    <Container fluid>
-      <Row className="signup-row">
-        <Col className="signup-colA" md="6"></Col>
+    <Row>
+      <Col>
+        <Row>
+          <h2>Edit profile</h2>
+        </Row>
 
-        <Col className="signup-colB" md="6">
-          <Form className="signup-frm">
-            <h2>Sign up - Donor</h2>
+        <br></br>
 
+        <Row>
+          <Form>
             {/* form lables */}
 
-            {/* name */}
-            <Form.Group className="mb-3" controlId="formBasicName">
-              <Form.Label>Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter name" required />
-            </Form.Group>
-
-            {/* email */}
             <Row>
-              <Form.Group
-                className="mb-3"
-                as={Col}
-                lmd="6"
-                controlId="formBasicEmail"
-              >
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" required />
-              </Form.Group>
-
               {/* password */}
-              <Form.Group
-                className="mb-3"
-                as={Col}
-                lmd="6"
-                controlId="formBasicPassword"
-              >
+              <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
                 <Form.Control
                   type="password"
@@ -97,22 +77,16 @@ const Donorsignup = () => {
             </Row>
 
             {/* button */}
-            <div className="signup-btn">
-              <Button type="submit" id="formSignupBtn">
-                Sign up
+            <div className="edit-btn">
+              <Button type="submit" id="formEditBtn">
+                Update
               </Button>
             </div>
-
-            <div className="signup-text">
-              <small>
-                Already have an account? <a href="/login">Sing in</a>
-              </small>
-            </div>
           </Form>
-        </Col>
-      </Row>
-    </Container>
+        </Row>
+      </Col>
+    </Row>
   );
 };
 
-export default Donorsignup;
+export default DonorProfileEditForm;

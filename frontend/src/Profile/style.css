@@ -1,50 +1,71 @@
 /* Donor profile top bar */
-.addDonations-btn{
+.addDonations-btn {
   text-decoration: none;
   display: inline-block;
   color: white;
 }
-.addDonations-btn:hover, .addDonations-btn:active {
+.addDonations-btn:hover,
+.addDonations-btn:active {
   color: white;
 }
 
 /* Donor profile side bar*/
-.donor-profile-side-bar{
+.donor-profile-side-bar {
   background-color: rgb(156, 194, 236);
   min-height: 850px;
   position: sticky;
 }
-.donor-prof-sidebar-img{
+.donor-prof-sidebar-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
-.donor-prof-sidebar-name{
+.donor-prof-sidebar-name {
   text-align: center;
 }
-/* .donor-prof-sidebar-list{
-  text-align: center;
-} */
-.donor-prof-sidebar-icons{
+.donor-prof-sidebar-icons {
   font-size: 25px;
 }
-.donor-prof-sidebar-links{
+.donor-prof-sidebar-links {
   text-decoration: none;
   color: black;
 }
-.donor-prof-sidebar-links:hover, .donor-prof-sidebar-links:active{
+.donor-prof-sidebar-links:hover,
+.donor-prof-sidebar-links:active {
   color: black;
 }
 
 /* Donor profile */
-.donor-prof-row{
-  padding-top: 20px;
+.donor-prof-row {
+  padding: 20px;
 }
 
 /*Donor edit profile*/
-.donor-edit-prof-row{
-  padding-top: 20px;
+.donor-edit-prof-row {
+  padding: 20px;
 }
 
+/*Donor my donations*/
+.donor-my-donations-row {
+  padding: 20px;
+}
 
+/*Donor add donations*/
+.donor-add-donations-row{
+  padding: 20px;
+}
+
+/*create donations*/
+.donation-frm {
+  padding: 50px;
+  background-color: rgb(0, 183, 255);
+  margin: auto;
+  width: 100%;
+}
+.card-createdonations {
+  padding: 10px;
+  background-color: rgb(167, 218, 238);
+  border: 1px solid black;
+  margin-bottom: 20px;
+}

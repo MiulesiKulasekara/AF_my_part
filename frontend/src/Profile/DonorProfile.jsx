@@ -6,34 +6,29 @@ import DonationItem from "./DonationItem";
 import DonorProfileTopBar from "./DonorProfileTopBar";
 import DonorProfileSideBar from "./DonorProfileSideBar";
 
-
 const DonorProfile = () => {
   return (
     <Container fluid>
-      
       {/* main row */}
       <Row className="donor-prof-row">
-
         {/* Side bar */}
         <Col md={2} className="donor-prof-sidebar">
-          <DonorProfileSideBar/>
+          <DonorProfileSideBar />
         </Col>
 
         {/* content */}
         <Col className="donor-prof-content">
           {/* top bar */}
           <Row>
-            <DonorProfileTopBar/>
+            <DonorProfileTopBar />
           </Row>
 
           {/* table */}
           <Row>
-            <DonationItem/>
+            <DonationItem />
           </Row>
         </Col>
       </Row>
-
-
     </Container>
   );
 };

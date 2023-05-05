@@ -1,5 +1,5 @@
 /* Donor - singup form */
-.signup-div {
+.signup-row {
   width: 80%;
 }
 .signup-frm {
@@ -15,7 +15,7 @@
 /* ---------------------------------------------- */
 
 /* login */
-.login-div {
+.login-row {
   width: 80%;
 }
 .login-frm {
