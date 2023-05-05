@@ -1,0 +1,50 @@
+/* Donor profile top bar */
+.addDonations-btn{
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+}
+.addDonations-btn:hover, .addDonations-btn:active {
+  color: white;
+}
+
+/* Donor profile side bar*/
+.donor-profile-side-bar{
+  background-color: rgb(156, 194, 236);
+  min-height: 850px;
+  position: sticky;
+}
+.donor-prof-sidebar-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.donor-prof-sidebar-name{
+  text-align: center;
+}
+/* .donor-prof-sidebar-list{
+  text-align: center;
+} */
+.donor-prof-sidebar-icons{
+  font-size: 25px;
+}
+.donor-prof-sidebar-links{
+  text-decoration: none;
+  color: black;
+}
+.donor-prof-sidebar-links:hover, .donor-prof-sidebar-links:active{
+  color: black;
+}
+
+/* Donor profile */
+.donor-prof-row{
+  padding-top: 20px;
+}
+
+/*Donor edit profile*/
+.donor-edit-prof-row{
+  padding-top: 20px;
+}
+
+

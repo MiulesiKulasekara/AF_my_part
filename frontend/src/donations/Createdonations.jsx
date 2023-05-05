@@ -3,6 +3,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+//////////pass current date current date
 
 const Createdonations = () => {
   return (
@@ -16,49 +17,52 @@ const Createdonations = () => {
             {/* form lables */}
 
             {/* food*/}
+            <Form.Label>Donate dry food</Form.Label>
             <Form.Group
               className="mb-3"
               as={Col}
               lmd="6"
               controlId="formBasicFood"
             >
-              <Form.Control
-                type="text"
-                placeholder="Donate dry food"
-                required
-              />
+              <Form.Control type="text" placeholder="Enter dry food" required />
             </Form.Group>
 
             <Row>
               {/*quatity*/}
-              <Form.Group
-                className="mb-3"
-                as={Col}
-                md="6"
-                controlId="formBasicQuantity"
-              >
-                <Form.Control type="number" placeholder="Quantity" required />
-              </Form.Group>
+              <Col>
+                <Form.Label>Quantity</Form.Label>
+                <Form.Group
+                  className="mb-3"
+                  controlId="formBasicQuantity"
+                >
+                  <Form.Control
+                    type="number"
+                    placeholder="Enter Quantity"
+                    required
+                  />
+                </Form.Group>
+              </Col>
 
               {/*unit*/}
-              <Form.Group
-                className="mb-3"
-                as={Col}
-                md="6"
-                controlId="formBasicUnit"
-              >
-                <Form.Select aria-label="Default select example">
-                  <option value="Kg">Kg</option>
-                  <option value="Leters">Leters</option>
-                  <option value="Packets">Packets</option>
-                  <option value="Botteled">Botteles</option>
-                  <option value="Items">Items</option>
-                </Form.Select>
-              </Form.Group>
+              <Col>
+                <Form.Label>Unit</Form.Label>
+                <Form.Group
+                  className="mb-3"
+                  controlId="formBasicUnit"
+                >
+                  <Form.Select aria-label="Default select example">
+                    <option value="Kg">Kg</option>
+                    <option value="Leters">Leters</option>
+                    <option value="Packets">Packets</option>
+                    <option value="Botteled">Botteles</option>
+                    <option value="Items">Items</option>
+                  </Form.Select>
+                </Form.Group>
+              </Col>
             </Row>
 
             {/*expire date*/}
-
+            <Form.Label>Expire date</Form.Label>
             <Form.Group className="mb-3" as={Col} controlId="formBasicExpdate">
               <Form.Control type="date" placeholder="Expire date" required />
             </Form.Group>
@@ -73,7 +77,22 @@ const Createdonations = () => {
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
-              <Form.Control as="textarea" rows={5} placeholder="Description" required/>
+              <Form.Control
+                as="textarea"
+                rows={5}
+                placeholder="Description"
+                required
+              />
+            </Form.Group>
+
+            {/*current date*/}
+
+            <Form.Group
+              className="mb-3"
+              as={Col}
+              controlId="formBasicCurrentdate"
+            >
+              <Form.Control type="hidden" required />
             </Form.Group>
 
             {/* button */}

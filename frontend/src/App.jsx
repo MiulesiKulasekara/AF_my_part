@@ -3,11 +3,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //routes
-import Donorsignup from "./donor/Auth/Donorsignup";
-import Login from "./donor/Auth/Login";
-import Alldonors from "./donor/Admin/Alldonors";
+import Donorsignup from "./Auth/Donorsignup";
+import Login from "./Auth/Login";
+import Alldonors from "./admin/Alldonors";
 import Createdonations from "./donations/Createdonations";
-import DonorProfileBar from "./donor/Profile/DonorProfileBar"
+import DonorProfile from "./Profile/DonorProfile";
+import DonationItem from "./Profile/DonationItem";
+import DonorProfileTopBar from "./Profile/DonorProfileTopBar";
+import DonorProfileSideBar from "./Profile/DonorProfileSideBar";
+import DonorEditProfile from "./Profile/DonorEditProfile";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -20,7 +24,11 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/admin/alldonors" element={<Alldonors />} />
           <Route path="/donor/create/donations" element={<Createdonations />} />
-          <Route path="/donor/myprofile" element={<DonorProfileBar />} />
+          <Route path="/donor/myprofile" element={<DonorProfile />} />
+          <Route path="/donor/donations" element={<DonationItem />} />
+          <Route path="/donor/donorprofiletopbar" element={<DonorProfileTopBar />} />
+          <Route path="/donor/donorprofilesidebar" element={<DonorProfileSideBar />} />
+          <Route path="/donor/edit/myprofile" element={<DonorEditProfile />} />
         </Routes>
       </BrowserRouter>
     </>

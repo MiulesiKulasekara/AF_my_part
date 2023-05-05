@@ -1,9 +1,5 @@
 /* Donor - singup form */
-.main-container-signup {
-  padding: 50px;
-}
 .signup-div {
-  margin: auto;
   width: 80%;
 }
 .signup-frm {
@@ -19,11 +15,7 @@
 /* ---------------------------------------------- */
 
 /* login */
-.main-container-login {
-  padding: 150px;
-}
 .login-div {
-  margin: auto;
   width: 80%;
 }
 .login-frm {
