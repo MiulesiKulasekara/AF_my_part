@@ -11,6 +11,11 @@ import DonorProfileTopBar from "./Profile/DonorProfileTopBar";
 import DonorProfileSideBar from "./Profile/DonorProfileSideBar";
 import DonorProfileEditForm from "./Profile/DonorProfileEditForm";
 
+///////////////////////////////////////////////////////////////
+import AllDonations from "./donations/AllDonations";
+import DonationRequests from "./Profile/DonationRequests"
+
+
 
 import DonorProfile from "./Profile/DonorProfile";
 import DonorEditProfile from "./Profile/DonorEditProfile";
@@ -34,6 +39,11 @@ function App() {
           <Route path="/donor/myprofile" element={<DonorProfile />} />
           <Route path="/donor/edit/myprofile" element={<DonorEditProfile />} />
           <Route path="/donor/add/donations" element={<DonorAddDonations />} /> 
+
+          {/* //////////////////////////////////////////////////////////////////////// */}
+          <Route path="/donationList" element={<AllDonations />} /> 
+          <Route path="/donation/requests" element={<DonationRequests />} /> 
+
         </Routes> 
       </BrowserRouter>
     </>

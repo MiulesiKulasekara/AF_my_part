@@ -69,3 +69,24 @@
   border: 1px solid black;
   margin-bottom: 20px;
 }
+
+/* request */
+.request-main-row{
+  padding-top: 20px;
+}
+.donor-request-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  margin-top: 8px;
+}
+.request-row{
+  background-color: rgb(166, 191, 223);
+  border-radius: 10px;
+  border: 2px solid rgb(170, 170, 233);
+  margin-bottom: 10px;
+}
+.request-btn{
+  margin-top: 30px;
+}
