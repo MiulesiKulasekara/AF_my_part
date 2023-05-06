@@ -14,7 +14,11 @@ const DonationsSchema = mongoose.Schema({
       type: String,
       required: true,
     },
-    day: {
+    expiredate: {
+      type: String,
+      required: true,
+    },
+    currentdate: {
       type: String,
       required: true,
     },
